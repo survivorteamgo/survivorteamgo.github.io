@@ -1,0 +1,14 @@
+---
+layout: default
+permalink: /episode-list/
+title: episodes
+description: list of podcast episodes
+---
+
+<h3>{{ page.title }}</h3>
+
+<ul>
+    {% for post in site.posts %}
+        <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: " | %B %d, %Y" }}</time></span></a></article></li>
+    {% endfor %}
+</ul>

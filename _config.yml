@@ -1,2 +1,15 @@
 title: Survivor Team Go!
+description: Support. Recover. Thrive.
+logo: STG-logo.jpg
+
 theme: jekyll-theme-cayman
+
+links:
+- title: home
+  url: /
+  external: false
+- title: episodes
+  url: /episode-list
+- title: about
+  url: /about
+
