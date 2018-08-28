@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /episode-list/
+permalink: /episodes/
 title: episodes
 description: list of podcast episodes
 ---
@@ -8,7 +8,7 @@ description: list of podcast episodes
 <h3>{{ page.title }}</h3>
 
 <ul>
-    {% for post in site.posts %}
-        <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: " | %B %d, %Y" }}</time></span></a></article></li>
+    {% for episode in site.posts %}
+        <li><article><a href="{{ site.url }}{{ episode.url }}">{{ episode.title }}<span class="entry-date"><time datetime="{{ episode.date | date_to_xmlschema }}">{{ episode.date | date: " | %B %d, %Y" }}</time></span></a></article></li>
     {% endfor %}
 </ul>

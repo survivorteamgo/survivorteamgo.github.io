@@ -9,7 +9,14 @@ links:
   url: /
   external: false
 - title: episodes
-  url: /episode-list
+  url: /episodes
 - title: about
   url: /about
 
+defaults:
+  - scope:
+      path: '' # an empty string here means all files in the project
+      type: 'posts'
+    values:
+      layout: 'episode'
+      author: 'The Survivor Team'
