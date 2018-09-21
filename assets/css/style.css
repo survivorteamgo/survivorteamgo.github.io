@@ -157,7 +157,7 @@ h6 { font-size: 16px; }
 
 p { margin: 10px 0 15px 0; }
 
-footer p { color: #f2f2f2; }
+footer p { color: black; }
 
 a { 
   text-decoration: none; 
@@ -178,7 +178,7 @@ a {
 a:hover, a:focus { text-decoration: underline; }
 
 footer a { 
-  color: #F2F2F2; 
+  color: hotpink; 
   text-decoration: underline; 
 }
 
@@ -322,11 +322,12 @@ Full-Width Styles
 }
 
 #header_wrap { 
-  background: #212121; 
+  background: #f2f2f2;
+  /* background: #212121; 
   background: -moz-linear-gradient(top, #373737, #212121); 
   background: -webkit-linear-gradient(top, #373737, #212121); background: -ms-linear-gradient(top, #373737, #212121); 
   background: -o-linear-gradient(top, #373737, #212121); 
-  background: linear-gradient(to top, #373737, #212121); 
+  background: linear-gradient(to top, #373737, #212121);  */
 }
 
 #header_wrap .inner { 
@@ -400,7 +401,7 @@ Full-Width Styles
 
 #main_content { padding-top: 40px; }
 
-#footer_wrap { background: #212121; }
+#footer_wrap { background: #f2f2f2; }
 
 /*******************************************************************************
 Small Device Styles
@@ -432,7 +433,7 @@ Small Device Styles
 
 /* styling the tagline/description/subtitle ...from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav */
 .notepad-blog-description {
-  color: #f2f2f2;
+  color: pink;
 }
 
 /* topnav responsive mobile menu styles */
