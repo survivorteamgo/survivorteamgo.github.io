@@ -2,7 +2,7 @@
 title: STG 10. Conversation with Cactus
 date: 2018-mm-dd 00:00:00
 
-voices: 'Oliver Ayers', 'Bailey Davenport', 'Cactus' # override default (which is just Oliver and Bailey) - delete line if just us
+voices: ['Oliver Ayers', 'Bailey Davenport', 'Cactus'] # override default (which is just Oliver and Bailey) - delete line if just us
 
 tags: [survivors, survivor stories]
 

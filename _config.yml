@@ -20,7 +20,7 @@ defaults:
     values:
       layout: 'episode'
       author: 'The Survivor Team'
-      voices: 'Oliver Ayers', 'Bailey Davenport'
+      voices: ['Oliver Ayers', 'Bailey Davenport']
       # iTunes podcast metadata
       artist: The Survivor Team # artist or host
       album: Survivor Team Go! # title of podcast
