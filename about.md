@@ -5,7 +5,7 @@ title: about
 description: about page
 ---
 
-![Survivor Team Go! logo](STG-logo.jpg)
+![Survivor Team Go! logo](https://s3-us-west-1.amazonaws.com/www.survivorteamgo.com/STG-artemisia-1000.png)
 
 # Who We Are:
 
