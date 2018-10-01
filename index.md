@@ -5,4 +5,4 @@ title: home
 
 ### Survivor Team Go!
 
-A podcast for survivors!
+Survivor Team Go! is a podcast for and by survivors of trauma. This is our website!
