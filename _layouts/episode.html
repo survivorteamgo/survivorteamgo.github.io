@@ -13,7 +13,31 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
 
-        <h2>{{ page.title }}</h2>
+        <h2>{{ page.episode_title }}</h2>
+
+        <h3>
+
+            by 
+            {% assign num_voices = page.voices.size %}
+            {% assign last_index = num_voices | minus: 1 %}
+            {% assign last_voice = page.voices[last_index] %}
+  
+            {% if num_voices > 2 %}
+              {% for voice in page.voices %}
+                {% unless voice == last_voice %}
+                  {{ voice }}, 
+                {% endunless %}
+              {% endfor %}
+              and {{ last_voice }}
+            {% elsif num_voices > 1 %}
+              {{ page.voices[0] }} and {{ last_voice }}
+            {% else %}
+              {% for voice in page.voices %}
+                {{ voice }}
+              {% endfor %}
+            {% endif %}  
+
+        </h3>
 
         <audio controls>
           <source src="{{ page.mp3_link }}" type="audio/mpeg">
