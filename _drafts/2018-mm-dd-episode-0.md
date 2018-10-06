@@ -14,7 +14,9 @@ season: 00
 track: 000 # episode number
 year: 2018
 comment: testing123 # short summary
-URL: /2018/mm/dd/episode-0.html
+url: /2018/mm/dd/episode-0.html
+episode_duration: '00:00:00'
+episode_file_size: 0.0 MB
 ---
 
 test

@@ -14,7 +14,9 @@ season: 02
 track: 010 # episode number
 year: 2018
 comment: BDSM, kink, and consent in Kansas City # short summary
-URL: /2018/mm/dd/episode-10.html
+url: /2018/mm/dd/episode-10.html
+episode_duration: '00:00:00'
+episode_file_size: 0.0 MB
 ---
 
 test
