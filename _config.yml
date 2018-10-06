@@ -1,6 +1,8 @@
 title: Survivor Team Go!
 description: Support. Recover. Thrive.
 header_logo: https://s3-us-west-1.amazonaws.com/www.survivorteamgo.com/STG-artemisia-150.png
+author: 'The Survivor Team'
+url: "https://survivorteamgo.github.io/"
 
 theme: jekyll-theme-cayman
 
@@ -13,6 +15,20 @@ links:
 - title: about
   url: /about
 
+
+# podcast metadata
+podcast_title: Survivor Team Go! # as opposed to episode_title
+podcast_creator: 'The Survivor Team' # same as author
+podcast_owner: 'The Survivor Team' # distinct from author i guess?
+podcast_art: https://s3-us-west-1.amazonaws.com/www.survivorteamgo.com/STG-artemisia-original.png # min 1400x1400 max 3000x3000 (original is 2000x2000)
+podcast_email: survivorteamgo@gmail.com
+itunes_category: Society & Culture # itunes_category because "category" changes the url
+itunes_subcategory: Personal Journals
+itunes_explicit: "yes" # contains cursing
+podcast_description: A podcast for and by survivors!
+podcast_summary: 'Join Bailey and Oliver as we discuss our favorite survivor stories, interview fellow survivors, and share survivor tips. Welcome to the island! This is a safe space. Trigger warning: everything. Bummers welcome.'
+podcast_subtitle: Support. Recover. Thrive.
+
 defaults:
   - scope:
       path: '' # an empty string here means all files in the project
@@ -20,16 +36,13 @@ defaults:
     values:
       # site specific
       layout: 'episode'
-      episode_author: 'The Survivor Team' # same as author
       # iTunes podcast metadata
-      podcast_title: Survivor Team Go! # as opposed to episode_title
-      album: Survivor Team Go! # title of podcast
       author: 'The Survivor Team'
       artist: The Survivor Team # artist or host
       voices: ['Oliver Ayers', 'Bailey Davenport'] # overridden on episodes with guests
-      album_art: https://s3-us-west-1.amazonaws.com/www.survivorteamgo.com/STG-artemisia-original.png # min 1400x1400 max 3000x3000 (original is 2000x2000)
-      itunes_category: Society & Culture # itunes_category because "category" changes the url
-      itunes_subcategory: Personal Journals
       copyright: The Survivor Team # ???
       website: https://survivorteamgo.github.io/
+      category: podcast
+      
+
 
