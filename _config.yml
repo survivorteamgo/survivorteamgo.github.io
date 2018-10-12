@@ -1,7 +1,8 @@
 title: Survivor Team Go!
-description: Support. Recover. Thrive.
+subtitle: Support. Recover. Thrive.
 header_logo: https://s3-us-west-1.amazonaws.com/www.survivorteamgo.com/STG-artemisia-150.png
 author: 'The Survivor Team'
+webmaster: 'Oliver Ayers'
 url: "https://survivorteamgo.github.io/"
 
 theme: jekyll-theme-cayman
@@ -37,13 +38,13 @@ defaults:
     values:
       # site specific
       layout: 'episode'
+      category: podcast
       # iTunes podcast metadata
       author: 'The Survivor Team'
       artist: 'The Survivor Team' # artist or host
       voices: ['Oliver Ayers', 'Bailey Davenport'] # overridden on episodes with guests
       copyright: 'The Survivor Team' # ???
       website: https://survivorteamgo.github.io/
-      category: podcast
       
 
 
