@@ -14,37 +14,37 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 >
  
 <channel>
-<title>{{ site.podcast_title }}</title>
+<title><![CDATA[ {{ site.podcast_title }} ]]></title>
 <atom:link href="{{ site.url }}/feed" rel="self" type="application/rss+xml" />
 <link>{{ site.url }}</link>
-<description>{{ site.podcast_description }}</description>
+<description><![CDATA[ {{ site.podcast_description }} ]]></description>
 <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
 <language>en-US</language>
 <sy:updatePeriod>hourly</sy:updatePeriod>
 <sy:updateFrequency>1</sy:updateFrequency>
 <generator>http://jekyllrb.com</generator>
-<itunes:summary>{{ site.podcast_summary }}</itunes:summary>
-<itunes:author>{{ site.podcast_creator }}</itunes:author>
+<itunes:summary><![CDATA[ {{ site.podcast_summary }} ]]></itunes:summary>
+<itunes:author><![CDATA[ {{ site.podcast_creator }} ]]></itunes:author>
 <itunes:explicit>{{ site.podcast_explicit }}</itunes:explicit>
-<itunes:image href="{{ site.url }}{{ site.podcast_art }}" />
+<itunes:image href="{{ site.podcast_art }}" />
 <itunes:owner>
-<itunes:name>{{ site.podcast_owner }}</itunes:name>
-<itunes:email>{{ site.podcast_email }}</itunes:email>
+    <itunes:name><![CDATA[ {{ site.podcast_owner }} ]]></itunes:name>
+    <itunes:email>{{ site.podcast_email }}</itunes:email>
 </itunes:owner>
 <managingEditor>{{ site.podcast_email }} ({{ site.podcast_owner }})</managingEditor>
-<itunes:subtitle>{{ site.podcast_subtitle }}</itunes:subtitle>
+<itunes:subtitle><![CDATA[ {{ site.podcast_subtitle }} ]]></itunes:subtitle>
 <image>
-<title>{{ site.podcast_title }}</title>
-<url>{{ site.podcast_art }}</url>
-<link>{{ site.url }}</link>
+    <title><![CDATA[{{ site.podcast_title }}]]></title>
+    <url>{{ site.podcast_art }}</url>
+    <link>{{ site.url }}</link>
 </image>
 <itunes:category text="{{ site.itunes_category }}" />
-<itunes:category text="{{ site.itunes_subcategory }}" />
-<!-- <itunes:category text="{{ site.podcast_subcategory_two }}" /> -->
+    <itunes:category text="{{ site.itunes_subcategory }}" />
 </itunes:category>
+
 {% for ep in site.categories.podcast %}
   <item>
-    <title>{{ ep.title }}</title>
+    <title><![CDATA[ {{ ep.episode_title }} ]]></title>
     <link>{{ site.url }}/podcast/{{ ep.url }}</link>
     <comments>{{ site.url }}/podcast/{{ ep.url }}#comments</comments>
     <pubDate>{{ ep.date | date: "%a, %d %b %Y %T %z" }}</pubDate>
@@ -63,8 +63,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
         <![CDATA[{{ ep.content | expand_urls: site.url | cdata_escape }}]]>
     </content:encoded>
 
-    <enclosure url="{{ ep.mp3_link }}" duration="{{ ep.podcast_duration }}" type="audio/mpeg" />
-    <!-- above was ' length="{{ ep.podcast_length }}" ' as opposed to ' duration="{{ ep.podcast_duration }}" ' -->
+    <enclosure url="{{ ep.mp3_link }}" length="{{ ep.episode_length }}" type="audio/mpeg" />
 
     <itunes:subtitle><![CDATA[{{ ep.excerpt | strip_html | truncatewords: 50 | expand_urls: site.url | cdata_escape }}]]></itunes:subtitle>
     <itunes:summary><![CDATA[{{ ep.content | expand_urls: site.url | cdata_escape }}]]></itunes:summary>
