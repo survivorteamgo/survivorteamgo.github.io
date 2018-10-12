@@ -7,6 +7,12 @@ url: "https://survivorteamgo.github.io/"
 
 theme: jekyll-theme-cayman
 
+markdown: kramdown
+timezone: America/Los_Angeles
+
+rss_path: /feed
+rss_name: index.xml
+
 links:
 - title: home
   url: /
