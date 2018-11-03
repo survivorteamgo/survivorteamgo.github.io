@@ -2,7 +2,9 @@
 layout: null
 ---
 
-<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" >
 
 	<channel>
 
@@ -11,12 +13,21 @@ layout: null
 		<description><![CDATA[ {{ site.podcast_description }} ]]></description>
 		<link>{{ site.url }}</link>
 		<language>en-us</language>
-		<copyright>Copyright 2018</copyright>
+		<copyright><![CDATA[ 2018 Survivor Team Go! All rights reserved. ]]></copyright>
 		<lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
 		<pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
 		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
 		<webMaster><![CDATA[ {{ site.podcast_email }} ({{ site.webmaster }}) ]]></webMaster>
-		
+		<image>
+			<title><![CDATA[ {{ site.podcast_title }} ]]></title>
+			<url>{{ site.podcast_art }}</url>
+			<link>{{ site.url }}</link>
+			<width></width>
+			<height></height>
+		</image>
+		<category></category>
+
+
 		<!--itunes stuff-->
 		<itunes:author><![CDATA[ {{ site.podcast_creator }} ]]></itunes:author>
 		<itunes:subtitle><![CDATA[ {{ site.podcast_subtitle }} ]]></itunes:subtitle>
@@ -25,19 +36,19 @@ layout: null
 			<itunes:name><![CDATA[ {{ site.podcast_owner }} ]]></itunes:name>
 			<itunes:email>{{ site.podcast_email }}</itunes:email>
 		</itunes:owner>		
-		<itunes:explicit>{{ site.podcast_explicit }}</itunes:explicit>
+		<itunes:explicit>{{ site.itunes_explicit }}</itunes:explicit>
         <itunes:image href="{{ site.podcast_art }}"/>
-		<itunes:category text="{{ site.itunes_category | cdata_escape }}">
+		<itunes:category text="Society &amp; Culture">
 			<itunes:category text="{{ site.itunes_subcategory | cdata_escape }}" />
 		</itunes:category>
-		
+
 		<!--episode-->
-		{% for ep in site.categories.podcast %}
+		{% for ep in site.posts %}
 			<item>
-				<title><![CDATA[ {{ ep.episode_title }} ]]></title>
-				<link>{{ site.url }}/podcast/{{ ep.url }}</link>
-				<guid>{{ site.url }}/podcast/{{ ep.url }}</guid>
-				<description><![CDATA[ {{ ep.excerpt | strip_html | truncatewords: 50 | expand_urls: site.url | cdata_escape }} ]]></description>
+				<title><![CDATA[ {{ ep.episode_title | cdata_escape }} ]]></title>
+				<link>{{ site.url }}{{ ep.url }}</link>
+				<guid>{{ ep.mp3_link }}</guid>
+				<description><![CDATA[ {{ ep.content | strip_html | expand_urls: site.url | cdata_escape }} ]]></description>
 				<enclosure url="{{ ep.mp3_link }}" length="{{ ep.episode_length }}" type="audio/mpeg"/>
 				<category><![CDATA[ {{ site.itunes_category | cdata_escape }} ]]></category>
 				<pubDate>{{ ep.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
@@ -48,9 +59,16 @@ layout: null
 				<itunes:subtitle><![CDATA[ {{ ep.episode_subtitle }} ]]></itunes:subtitle>
 				<itunes:summary><![CDATA[ {{ ep.content | expand_urls: site.url | cdata_escape }} ]]></itunes:summary>
 				<itunes:duration>{{ ep.episode_duration }}</itunes:duration>
-				<itunes:keywords><![CDATA[ {{ ep.tags }} ]]></itunes:keywords>
+				<itunes:keywords>
+				<![CDATA[ 
+						{% for tag in ep.tags %}
+							{{tag}}, 
+						{% endfor %}
+				]]>
+				</itunes:keywords>
 			</item>
 		{% endfor %}			
+
 
 	</channel>
 
