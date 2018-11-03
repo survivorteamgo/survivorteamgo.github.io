@@ -1,0 +1,54 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" >
+
+<channel>
+
+    <!-- general -->
+    <title><![CDATA[ {{ site.podcast_title }} ]]></title>
+    <link>{{ site.url }}</link>
+    <description><![CDATA[ {{ site.podcast_description }} ]]></description>
+    <category>podcast</category>
+    <copyright><![CDATA[ {{ site.podcast_copyright }} ]]></copyright>
+    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+    <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+    <language>en-us</language>
+
+    <image>
+        <url>{{ site.podcast_art }}</url>
+        <title><![CDATA[ {{ site.podcast_title }} ]]></title>
+        <link>{{ site.url }}</link>
+    </image>
+
+    <!-- itunes -->
+    <itunes:author>{{ site.podcast_creator }}</itunes:author>
+    <itunes:subtitle>{{ site.podcast_subtitle }}</itunes:subtitle>
+    <itunes:summary>{{ site.podcast_summary }}</itunes:summary>
+    <itunes:owner>
+        <itunes:name>{{ site.podcast_owner }}</itunes:name>
+        <itunes:email>{{ site.podcast_email }}</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>{{ site.itunes_explicit }}</itunes:explicit>
+    <itunes:image href="{{ site.podcast_art }}" />
+    <itunes:category text="Society &amp; Culture">
+        <itunes:category text="{{ site.itunes_subcategory }}" />
+    </itunes:category>
+
+    <!-- episodes -->
+    {% for ep in site.posts %}
+        <item>
+            <title>{{ ep.episode_title }}</title>
+            <author>{{ site.podcast_email }}</author>
+            <link>{{ site.url }}{{ ep.url }}</link>
+            <description><![CDATA[ {{ ep.excerpt | truncatewords: 50 }} ]]></description>
+            <enclosure url="{{ ep.mp3_link }}" length="{{ ep.episode_length }}" type="audio/mpeg" />
+
+        </item>
+    {% endfor %}
+
+</channel>
+
+</rss>
