@@ -50,8 +50,6 @@ links:
   url: /about
 - title: feed
   url: /feed
-- title: podcast feed
-  url: /feed/podcast
 - title: rss feed
   url: /feed/rss
 
