@@ -40,18 +40,3 @@ defaults:
       copyright: '2018 The Survivor Team. All rights reserved.' # ???
       website: https://survivorteamgo.github.io/
       
-links:
-- title: home
-  url: /
-  external: false
-- title: episodes
-  url: /episodes
-- title: about
-  url: /about
-- title: feed
-  url: /feed
-- title: rss feed
-  url: /feed/rss
-
-
-
