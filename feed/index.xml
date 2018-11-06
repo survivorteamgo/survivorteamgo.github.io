@@ -22,10 +22,10 @@ layout: null
 			<title><![CDATA[ {{ site.podcast_title }} ]]></title>
 			<url>{{ site.podcast_art }}</url>
 			<link>{{ site.url }}</link>
-			<width></width>
-			<height></height>
+			<width>1400</width>
+			<height>1400</height>
 		</image>
-		<category></category>
+		<category>podcast</category>
 
 
 		<!--itunes stuff-->
