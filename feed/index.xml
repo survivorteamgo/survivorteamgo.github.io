@@ -22,8 +22,6 @@ layout: null
 			<title><![CDATA[ {{ site.podcast_title }} ]]></title>
 			<url>{{ site.podcast_art }}</url>
 			<link>{{ site.url }}</link>
-			<width>1400</width>
-			<height>1400</height>
 		</image>
 		<category>podcast</category>
 
