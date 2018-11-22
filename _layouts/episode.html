@@ -15,9 +15,9 @@
 
         <h2>{{ page.episode_title }}</h2>
 
-        <h3>
+        <h4>
 
-            by 
+            with 
             {% assign num_voices = page.voices.size %}
             {% assign last_index = num_voices | minus: 1 %}
             {% assign last_voice = page.voices[last_index] %}
@@ -37,7 +37,16 @@
               {% endfor %}
             {% endif %}  
 
-        </h3>
+        </h4>
+
+        <h4>
+            on
+            <span class="entry-date">
+              <time datetime="{{ page.date | date_to_xmlschema }}">
+                {{ page.date | date: "%B %d, %Y" }}
+              </time>
+            </span>
+        </h4>
 
         <audio controls>
           <source src="{{ page.mp3_link }}" type="audio/mpeg">
