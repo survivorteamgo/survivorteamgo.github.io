@@ -9,6 +9,17 @@ description: list of podcast episodes
 
 <ul>
     {% for episode in site.posts %}
-        <li><article><a href="{{ site.url }}{{ episode.url }}">{{ episode.title }}<span class="entry-date"><time datetime="{{ episode.date | date_to_xmlschema }}">{{ episode.date | date: " | %B %d, %Y" }}</time></span></a></article></li>
+        <li>
+            <article>
+                <a href="{{ site.url }}{{ episode.url }}">
+                    {{ episode.title }}
+                    <span class="entry-date">
+                        <time datetime="{{ episode.date | date_to_xmlschema }}">
+                            {{ episode.date | date: " | %B %d, %Y" }}
+                        </time>
+                    </span>
+                </a>
+            </article>
+        </li>
     {% endfor %}
 </ul>
