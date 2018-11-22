@@ -1,6 +1,6 @@
 ---
 title: 'STG 0. episodetitle'
-date: yyyy-mm-dd 00:00:00
+date: yyyy-mm-dd 12:00:00
 
 voices: ['Oliver Ayers', 'Bailey Davenport', 'GuestName'] # override default (which is just Oliver and Bailey) - delete line if just us
 
