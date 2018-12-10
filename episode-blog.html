@@ -1,0 +1,74 @@
+---
+layout: default
+permalink: /episodes/
+title: episodes
+description: a list of episodes laid out like a blog
+---
+
+<h3>{{ page.title }}</h3>
+
+<div class="row">
+    <div class="leftcolumn">
+        {% for ep in site.posts %}
+            <div class="card">
+                <h2>
+                    <a href="{{ site.url }}{{ ep.url }}">
+                        {{ ep.episode_title }}
+                    </a>
+                </h2>
+                <h5>{{ ep.episode_subtitle }}</h5>
+                <h5>
+                    with 
+                    {% assign num_voices = ep.voices.size %}
+                    {% assign last_index = num_voices | minus: 1 %}
+                    {% assign last_voice = ep.voices[last_index] %}
+        
+                    {% if num_voices > 2 %}
+                    {% for voice in ep.voices %}
+                        {% unless voice == last_voice %}
+                        {{ voice }}, 
+                        {% endunless %}
+                    {% endfor %}
+                    and {{ last_voice }}
+                    {% elsif num_voices > 1 %}
+                    {{ ep.voices[0] }} and {{ last_voice }}
+                    {% else %}
+                    {% for voice in ep.voices %}
+                        {{ voice }}
+                    {% endfor %}
+                    {% endif %} 
+                    on 
+                    <span class="entry-date">
+                        <time datetime="{{ ep.date | date_to_xmlschema }}">
+                            {{ ep.date | date: "%B %d, %Y" }}
+                        </time>
+                    </span>
+                </h5>
+                <!-- if i had an image it would go here -->
+                <p>{{ ep.content }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="rightcolumn">
+        <div class="card">
+            <h2><a href="{{ site.url }}/about">About</a></h2>
+            <!-- our pics go here -->
+            <p>About us!!!! We are people</p>
+        </div>
+        <div class="card">
+            <h2>Latest Episodes</h2>
+            {% for ep in site.posts limit:3 %}
+                <h5>
+                    <a href="{{ site.url }}{{ ep.url }}">
+                        {{ ep.episode_title }}
+                    </a>
+                </h5>
+            {% endfor %}
+        </div>
+        <div class="card">
+            <h2><a href="{{ site.itunes_subscribe_link }}">Subscribe on iTunes or Apple Podcasts!</a></h2>
+            <p>And don't forget to rate and review!</p>
+            <p>P.S. We are also available on most podcast apps (Stitcher, Google Play, etc) so listen on your preferred platform!</p>
+        </div>
+    </div>
+</div>
