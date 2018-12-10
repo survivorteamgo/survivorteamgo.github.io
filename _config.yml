@@ -4,12 +4,17 @@ header_logo: https://s3-us-west-1.amazonaws.com/www.survivorteamgo.com/STG-artem
 author: 'The Survivor Team'
 webmaster: 'Oliver Ayers'
 url: http://www.survivorteamgo.com/
+itunes_subscribe_link: https://itunes.apple.com/us/podcast/survivor-team-go/id1361306238?mt=2
 
 markdown: kramdown
 timezone: America/Los_Angeles
 
 rss_path: /feed
 rss_name: index.xml
+
+# about page
+about_bailey_pic: https://s3-us-west-1.amazonaws.com/www.survivorteamgo.com/about-bailey-photo.JPG
+about_oliver_pic: https://s3-us-west-1.amazonaws.com/www.survivorteamgo.com/about-oliver-photo.JPG
 
 # podcast metadata
 podcast_copyright: 2018 The Survivor Team. All rights reserved.
