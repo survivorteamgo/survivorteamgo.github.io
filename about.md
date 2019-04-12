@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /about/
+permalink: /aboutt/
 title: about
 description: about page
 ---
