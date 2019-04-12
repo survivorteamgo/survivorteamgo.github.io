@@ -11,9 +11,13 @@
 
 .card {
     /* STGpink */
-    background-color: #ffeaef;
+    background-color: rgb(248, 223, 227);
+    /* background-color: white; */
     padding: 20px;
     margin-top: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: hotpink;
 }
 
 /* responsive - columns stack instead of side by side */
