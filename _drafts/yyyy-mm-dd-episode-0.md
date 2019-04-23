@@ -12,9 +12,9 @@ mp3_link: s3link
 episode_title: 'test'
 season: 00
 track: 000 # episode number
-year: 2018
+year: yyyy
 episode_subtitle: 'testing123'
-url: /2018/mm/dd/episode-0.html
+url: /yyyy/mm/dd/episode-0.html
 episode_duration: '00:00:00'
 episode_file_size: 0.0 MB
 episode_length: 00000000 # file size in bytes!
