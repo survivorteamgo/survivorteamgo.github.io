@@ -4,34 +4,29 @@ permalink: /about/
 title: about
 description: about page
 ---
-
-<!-- <h3>{{ page.title }}</h3> -->
-
-<!-- <img src="{{ site.podcast_art }}" alt="Survivor Team Go logo" width="500" height="500" /> -->
-
-<h1>Who We Are:</h1>
-
-<!-- floats and columns -->
-<div class="card">
-    <h3>Bailey Davenport</h3>
-    <div class="row">
-        <div class="image-column">
-            <img src="{{ site.about_bailey_pic }}" alt="pic of Bailey" />
+<div class="about-row">
+    <div class="about-column">
+        <div class="about-card">
+            <div class="about-image">
+                <img src="{{ site.about_bailey_pic }}" alt="pic of Bailey" width="100%" />
+            </div>
+            <div class="about-container">
+                <h3>Bailey Davenport</h3>
+                <p>Bailey Davenport is a painter, prophet, podcaster, performance artist, and visual arts grad student at UCSD! Pronouns: they/she. Bailey is committed to elevating the voices and stories of fellow survivors and to changing the culture of silence and shame surrounding survivorship. They have two cats, Eve and Pancake.</p>
+            </div>
         </div>
-        <div class="text-column">
-            <p>Bailey Davenport is a painter, prophet, podcaster, performance artist, and visual arts grad student at UCSD! Pronouns: they/she. Bailey is committed to elevating the voices and stories of fellow survivors and to changing the culture of silence and shame surrounding survivorship. They have two cats, Eve and Pancake.</p>
+    </div>
+
+    <div class="about-column">
+        <div class="about-card">
+            <div class="about-image">
+                <img src="{{ site.about_oliver_pic }}" alt="pic of Oliver" />
+            </div>
+            <div class="about-container">
+                <h3>Oliver Ayers</h3>
+                <p>Oliver Ayers is a programmer, prophet, podcaster, and barista! Pronouns: they/he. Oliver has one dog, Cheerio.</p>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="card">
-    <h3>Oliver Ayers</h3>
-    <div class="row">
-        <div class="image-column">
-            <img src="{{ site.about_oliver_pic }}" alt="pic of Oliver" />
-        </div>
-        <div class="text-column">
-            <p>Oliver Ayers is a programmer, prophet, podcaster, and barista! Pronouns: they/he. Oliver has one dog, Cheerio.</p>
-        </div>
-    </div>
-</div>

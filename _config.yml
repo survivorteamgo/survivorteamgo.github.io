@@ -13,8 +13,10 @@ rss_path: /feed
 rss_name: index.xml
 
 # about page
-about_bailey_pic: https://s3-us-west-1.amazonaws.com/www.survivorteamgo.com/about-bailey-photo.JPG
-about_oliver_pic: https://s3-us-west-1.amazonaws.com/www.survivorteamgo.com/about-oliver-photo.JPG
+#about_bailey_pic: https://s3-us-west-1.amazonaws.com/www.survivorteamgo.com/about-bailey-photo.JPG
+about_bailey_pic: https://s3-us-west-1.amazonaws.com/www.survivorteamgo.com/about-bailey-photo2.JPG
+#about_oliver_pic: https://s3-us-west-1.amazonaws.com/www.survivorteamgo.com/about-oliver-photo.JPG
+about_oliver_pic: https://s3-us-west-1.amazonaws.com/www.survivorteamgo.com/about-oliver-photo2.JPG
 
 # podcast metadata
 podcast_copyright: 2019 FID Productions. All rights reserved.
